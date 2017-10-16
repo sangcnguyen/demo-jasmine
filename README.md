@@ -20,4 +20,5 @@ toThrowError()   | for testing a specific thrown exception
 The Jasmine `not` keyword can be used with every matcher’s criteria for inverting the result. 
 E.g.
 `expect(actual).not.toBe(expected);`
+
 `expect(actual).not.toBeDefined(expected);`
