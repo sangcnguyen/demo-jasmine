@@ -4,13 +4,18 @@ describe("MathUtils", function() {
     //This will be called before running each spec
     beforeEach(function() {
         calc = new MathUtils();
+        spyOn(calc,'sum')
     });
  
     describe("when calc is used to peform basic math operations", function(){
          
         // Spec for sum operation
         it("should be able to calculate sum of 3 and 5", function() {
-            expect(calc.sum(3,5)).toEqual(8);
+             //call any method
+             calc.sum(3,5);
+            // verify it got executed
+            expect(calc.sum).toHaveBeenCalled();
+            expect(calc.sum).toHaveBeenCalledWith(3,5);
         });
         
         // Spec for minus operation
