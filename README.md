@@ -53,9 +53,9 @@ E.g.
 
 ## Setup and teardown
 Sometimes in order to test a feature you need to perform some setup, perhaps it’s creating some test
-objects. Also we may need to perform some cleanup activities after we have finished testing,
-perhaps we need to delete some files from the hard drive.<br/>
-These activities are called setup and teardown (for cleaning up) and Jasmine has a few functions we
+objects. Also you may need to perform some cleanup activities after you have finished testing,
+perhaps you need to delete some files from the hard drive.<br/>
+These activities are called setup and teardown (for cleaning up) and Jasmine has a few functions you
 can use to make this easier:<br/>
 **beforeAll**<br/>
 This function is called once, before all the specs in describe test suite are run<br/>
