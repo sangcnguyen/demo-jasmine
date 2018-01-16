@@ -4,28 +4,24 @@
 [Behaviour Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development), or BDD for short. It’s a specific flavour of [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development) (TDD).<br/>
 For example if you wanted to test this function:
 ```
-function helloWorld() {
-  return 'Hello world!';
-} 
+function(number1,number2) {
+    return number1 + number2;
+}
 ```
 You would write a jasmine test spec like so:
 ```
-describe('Hello world', () => { 
-  it('says hello', () => { 
-  expect(helloWorld()) 
-  .toEqual('Hello world!'); 
-  });
+describe('Calculator', () => { (1)
+  it('sums 1 and 1 to 2', () => { (2)
+  var calc = new Calculator(); 
+  expect(calc.sum(1, 1)) (3)
+      .toEqual(2); (4)
+  });
 });
 ```
-The **describe(string, function)** function defines what we call a Test Suite, a collection of
-individual Test Specs.<br/>
-The **it(string, function)** function defines an individual Test Spec, this contains one or more
-Test Expectations.<br/>
-The **expect(actual)** expression is what we call an Expectation. In conjunction with a Matcher it
-describes an expected piece of behaviour in the application.<br/>
-The **matcher(expected)** expression is what we call a Matcher. It does a boolean comparison with
-the **expected** value passed in vs the **actual** value passed to the **expect** function, if they are false
-the spec fails.
+(1) The **describe(string, function)** function defines what we call a Test Suite, a collection of individual Test Specs.<br/>
+(2) The **it(string, function)** function defines an individual Test Spec, this contains one or more Test Expectations.<br/>
+(3) The **expect(actual)** expression is what we call an Expectation. In conjunction with a Matcher it describes an expected piece of behaviour in the application.<br/>
+(4) The **matcher(expected)** expression is what we call a Matcher. It does a boolean comparison with the **expected** value passed in vs the **actual** value passed to the **expect** function, if they are false the spec fails.
 
 ## Build-in matchers
 
